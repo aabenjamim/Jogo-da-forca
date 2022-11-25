@@ -7,8 +7,8 @@ import { useState } from "react";
 export default function App() {
 
   const [habilitar, setHabilitar] = useState("disabled")
+  const [palavraListada, setPalavraListada] = useState([])
 
-  let palavraListada;
   let lista;
 
   const [listaTracos, setListaTracos] = useState([])
@@ -18,8 +18,8 @@ export default function App() {
     <div className="conteudo">
       <Jogo divOculta={divOculta} palavraListada={palavraListada}
       setHabilitar={setHabilitar} setListaTracos={setListaTracos} setDivOculta={setDivOculta}
-      lista={lista}/>
-      <Letras habilitar={habilitar}/>
+      lista={lista} setPalavraListada={setPalavraListada} listaTracos={listaTracos}/>
+      <Letras habilitar={habilitar} palavraListada={palavraListada} lista={lista}/>
       <Chute/>
     </div>
   );
