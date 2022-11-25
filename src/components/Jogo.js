@@ -1,31 +1,32 @@
-import { useState } from "react";
 import palavras from "./palavras"
 
-export default function Jogo(props){
+export default function Jogo({divOculta, palavraListada, setHabilitar, 
+    setListaTracos, setDivOculta, lista}){
 
-    const [palavraOculta, setPalavraOculta] = useState("")
 
-    function comparador() { 
-        return Math.random() - 0.5; 
-    }
+  function escolherPalavra(){
+    let comparador = (() => Math.random() - 0.5) 
+    const listaAleatoria = palavras.sort(comparador);
+    const primeiraPalavra = listaAleatoria[0]
+    palavraListada = primeiraPalavra.split("")
+  }
 
-    function iniciarJogo(){
-        const listaAleatoria = palavras.sort(comparador);
-        const arrayPalavra = (listaAleatoria[0]).split('');
-        const listaOculta = [];
-        props.onClick()
-        for(let i=0; arrayPalavra.length>i; i++){
-            listaOculta.push('_')
-        }
-        return setPalavraOculta(<div className="tracos">{listaOculta.join(" ")}</div>)
-    }
+
+  function iniciarJogo(){
+    setHabilitar("")
+    escolherPalavra()
+    console.log(palavraListada)
+    lista = (palavraListada.map((letra)=> letra = "_"))
+    setListaTracos(lista)
+    return setDivOculta(<div className="tracos">{lista.join(" ")}</div>)
+  }
 
     return(
     <div className="topo">
         <img src="assets/forca0.png"/>
         <div className="direita">
             <button onClick={iniciarJogo}>Escolher Palavra</button>
-            {palavraOculta}
+            {divOculta}
         </div>
     </div>
     )
