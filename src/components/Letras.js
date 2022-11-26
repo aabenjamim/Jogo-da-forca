@@ -29,14 +29,15 @@ export default function Letras(props){
       setImgForca(`forca${errosAtualizados}`)
       console.log("erros", errosAtualizados)
     }
-    setDivOculta(<div className="tracos">{lista.join(" ")}</div>)
+    setDivOculta(<div className="tracos" data-test="word" data-answer={`${pList.join("")}`}>{lista.join(" ")}</div>)
     }
   
 
   return(
       <div className="alfabeto">
         {alfabeto.map((l)=> 
-        (<button disabled = {props.habilitar} onClick={()=> verificarLetra(l)}>{l}</button>))}
+        (<button disabled = {props.habilitar} onClick={()=> verificarLetra(l)}
+        data-test="letter">{l}</button>))}
       </div>
     )
 }

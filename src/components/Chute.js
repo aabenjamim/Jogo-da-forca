@@ -2,8 +2,8 @@ export default function Chute(){
     return(
     <div className="resposta">
         <label>Já sei a palavra!</label>
-        <input/>
-        <button>Chutar</button>
+        <input data-test="guess-input"/>
+        <button data-test="guess-button">Chutar</button>
     </div>
     )
 }

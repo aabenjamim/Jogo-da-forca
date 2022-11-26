@@ -20,14 +20,14 @@ export default function Jogo({divOculta, palavraListada, setHabilitar,
     listinha = palavraListada.map((letra)=> letra = "_")
     setLista(listinha)
     setListaTracos(lista)
-    setDivOculta(<div className="tracos">{listinha.join(" ")}</div>)
+    setDivOculta(<div className="tracos" data-test="word">{listinha.join(" ")}</div>)
   }
 
     return(
     <div className="topo">
-        <img src={`assets/${imgForca}.png`}/>
+        <img src={`assets/${imgForca}.png`} data-test="game-image"/>
         <div className="direita">
-            <button onClick={iniciarJogo}>Escolher Palavra</button>
+            <button onClick={iniciarJogo} data-test="choose-word">Escolher Palavra</button>
             {divOculta}
         </div>
     </div>
