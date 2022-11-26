@@ -8,8 +8,14 @@ export default function Letras(props){
   const setDivOculta = props.setDivOculta
   const divOculta = props.divOculta
   const setLista = props.setLista
+  const erros = props.erros
+  const setErros = props.setErros
+  const imgForca = props.imgForca
+  const setImgForca = props.setImgForca
 
   function verificarLetra(letra){
+    const temLetra = pList.includes(letra)
+
     for(let i=0; pList.length>i;i++){
       let letraDaVez = pList[i]
       if(letraDaVez===letra){
@@ -17,8 +23,15 @@ export default function Letras(props){
       } 
       setLista(lista)
     }
+    if(temLetra === false){
+      setErros(erros+1)
+      const errosAtualizados = erros + 1
+      setImgForca(`forca${errosAtualizados}`)
+      console.log("erros", errosAtualizados)
+    }
     setDivOculta(<div className="tracos">{lista.join(" ")}</div>)
-  }
+    }
+  
 
   return(
       <div className="alfabeto">

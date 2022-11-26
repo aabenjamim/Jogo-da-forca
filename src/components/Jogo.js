@@ -1,7 +1,8 @@
 import palavras from "./palavras"
 
 export default function Jogo({divOculta, palavraListada, setHabilitar, 
-    setListaTracos, setDivOculta, lista, setPalavraListada, setLista, listinha}){
+    setListaTracos, setDivOculta, lista, setPalavraListada, setLista, listinha,
+    imgForca, setImgForca}){
     
   function escolherPalavra(){
     let comparador = (() => Math.random() - 0.5) 
@@ -24,7 +25,7 @@ export default function Jogo({divOculta, palavraListada, setHabilitar,
 
     return(
     <div className="topo">
-        <img src="assets/forca0.png"/>
+        <img src={`assets/${imgForca}.png`}/>
         <div className="direita">
             <button onClick={iniciarJogo}>Escolher Palavra</button>
             {divOculta}
