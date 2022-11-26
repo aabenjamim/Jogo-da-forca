@@ -11,20 +11,20 @@ export default function App() {
 
   const [lista, setLista] = useState([])
 
+  const [listinha, setListinha] = useState("")
+
   const [listaTracos, setListaTracos] = useState([])
   const [divOculta, setDivOculta] = useState("")
 
   return (
     <div className="conteudo">
-
       <Jogo divOculta={divOculta} palavraListada={palavraListada}
       setHabilitar={setHabilitar} setListaTracos={setListaTracos} 
       setDivOculta={setDivOculta} lista={lista} setPalavraListada={setPalavraListada}
-      listaTracos={listaTracos} setLista={setLista}/>
-
-      <Letras habilitar={habilitar} palavraListada={palavraListada} listaTracos={listaTracos}
-      setListaTracos={setListaTracos} lista={lista}/>
+      listaTracos={listaTracos} setLista={setLista} listinha={listinha} setListinha={setListinha}/>
       
+      <Letras habilitar={habilitar} palavraListada={palavraListada} divOculta={divOculta}
+      lista={lista} setDivOculta={setDivOculta} setLista={setLista}/>
       <Chute/>
     </div>
   );

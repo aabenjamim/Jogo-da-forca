@@ -1,7 +1,7 @@
 import palavras from "./palavras"
 
 export default function Jogo({divOculta, palavraListada, setHabilitar, 
-    setListaTracos, setDivOculta, lista, setPalavraListada, setLista}){
+    setListaTracos, setDivOculta, lista, setPalavraListada, setLista, listinha}){
     
   function escolherPalavra(){
     let comparador = (() => Math.random() - 0.5) 
@@ -16,10 +16,10 @@ export default function Jogo({divOculta, palavraListada, setHabilitar,
     setHabilitar("")
     escolherPalavra()
     console.log("palavraListada", palavraListada)
-    const listinha = (palavraListada.map((letra)=> letra = "_")).join(" ")
+    listinha = palavraListada.map((letra)=> letra = "_")
     setLista(listinha)
     setListaTracos(lista)
-    setDivOculta(<div className="tracos">{listinha}</div>)
+    setDivOculta(<div className="tracos">{listinha.join(" ")}</div>)
   }
 
     return(
