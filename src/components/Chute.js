@@ -9,14 +9,19 @@ export default function Chute(props){
     const palavraResposta = palavraListada.join("")
     const setHabilitar = props.setHabilitar
     const setImgForca = props.setImgForca
+    const setDivOculta= props.setDivOculta
 
 
     function verificarChute(){
         if(texto === palavraResposta){
             setHabilitar(true)
+            setDivOculta(<div className="tracos" data-test="word" style={{color: "green"}}
+            data-answer={`${palavraListada.join("")}`}>{palavraResposta}</div>)
         } else{
             setHabilitar(true)
             setImgForca("forca6")
+            setDivOculta(<div className="tracos" data-test="word" style={{color: "red"}}
+            data-answer={`${palavraListada.join("")}`}>{palavraResposta}</div>)
         }
     }
 

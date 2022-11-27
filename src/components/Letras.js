@@ -14,7 +14,6 @@ export default function Letras(props){
   const imgForca = props.imgForca
   const setImgForca = props.setImgForca
   const setHabilitar = props.setHabilitar
-  const chute = props.chute
   const setCor = props.setCor
   let cor;
 
@@ -33,9 +32,6 @@ export default function Letras(props){
       setErros(erros+1)
       errosAtualizados = erros + 1
       setImgForca(`forca${errosAtualizados}`)
-      console.log("erros", errosAtualizados)
-      console.log((lista.join("")).split(""))
-      console.log(palavraListada)
     }
 
     const listaComparacao = lista.join("")

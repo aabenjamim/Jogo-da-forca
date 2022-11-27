@@ -37,10 +37,11 @@ export default function App() {
       <Letras habilitar={habilitar} setHabilitar={setHabilitar} palavraListada={palavraListada} 
       divOculta={divOculta} lista={lista} setDivOculta={setDivOculta} setLista={setLista} 
       erros={erros} setErros={setErros} imgForca={imgForca} setImgForca={setImgForca} chute={chute}
-      setCor={setCor}/>
+      setCor={setCor} cor={cor}/>
 
       <Chute chute={chute} setChute={setChute} texto={texto} setTexto={setTexto}
-      setHabilitar={setHabilitar} palavraListada={palavraListada} setImgForca={setImgForca}/>
+      setHabilitar={setHabilitar} palavraListada={palavraListada} setImgForca={setImgForca}
+      setDivOculta={setDivOculta}/>
     </div>
   );
 }
