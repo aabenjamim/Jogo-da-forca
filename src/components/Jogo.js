@@ -2,7 +2,7 @@ import palavras from "./palavras"
 
 export default function Jogo({divOculta, palavraListada, setHabilitar, 
     setListaTracos, setDivOculta, lista, setPalavraListada, setLista, listinha,
-    imgForca, setImgForca}){
+    imgForca, setImgForca, setErros}){
     
   function escolherPalavra(){
     let comparador = (() => Math.random() - 0.5) 
@@ -14,7 +14,9 @@ export default function Jogo({divOculta, palavraListada, setHabilitar,
 
 
   function iniciarJogo(){
-    setHabilitar("")
+    setErros(0)
+    setImgForca("forca0")
+    setHabilitar(false)
     escolherPalavra()
     console.log("palavraListada", palavraListada)
     listinha = palavraListada.map((letra)=> letra = "_")

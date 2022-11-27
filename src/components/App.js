@@ -6,7 +6,7 @@ import { useState } from "react";
 
 export default function App() {
 
-  const [habilitar, setHabilitar] = useState("disabled")
+  const [habilitar, setHabilitar] = useState(true)
   const [palavraListada, setPalavraListada] = useState([])
 
   const [lista, setLista] = useState([])
@@ -20,6 +20,9 @@ export default function App() {
 
   const [imgForca, setImgForca] = useState("forca0")
 
+  const [chute, setChute] = useState([])
+  const [texto, setTexto] = useState("")
+
   return (
     <div className="conteudo">
 
@@ -27,13 +30,14 @@ export default function App() {
       setHabilitar={setHabilitar} setListaTracos={setListaTracos} 
       setDivOculta={setDivOculta} lista={lista} setPalavraListada={setPalavraListada}
       listaTracos={listaTracos} setLista={setLista} listinha={listinha} setListinha={setListinha}
-      imgForca={imgForca} setImgForca={setImgForca}/>
+      imgForca={imgForca} setImgForca={setImgForca} setErros={setErros}/>
       
-      <Letras habilitar={habilitar} palavraListada={palavraListada} divOculta={divOculta}
-      lista={lista} setDivOculta={setDivOculta} setLista={setLista} 
+      <Letras habilitar={habilitar} setHabilitar={setHabilitar} palavraListada={palavraListada} 
+      divOculta={divOculta} lista={lista} setDivOculta={setDivOculta} setLista={setLista} 
       erros={erros} setErros={setErros} imgForca={imgForca} setImgForca={setImgForca}/>
 
-      <Chute/>
+      <Chute chute={chute} setChute={setChute} texto={texto} setTexto={setTexto}
+      habilitar={habilitar}/>
     </div>
   );
 }
