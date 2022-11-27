@@ -36,11 +36,16 @@ export default function Letras(props){
       console.log((lista.join("")).split(""))
       console.log(palavraListada)
     }
-    
+
     const listaComparacao = lista.join("")
 
     if(listaComparacao === palavraResposta){
       cor = "green"
+      setHabilitar(true)
+    }
+
+    if(errosAtualizados === 6){
+      cor = "red"
       setHabilitar(true)
     }
 
