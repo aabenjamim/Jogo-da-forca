@@ -14,11 +14,12 @@ export default function Letras(props){
   const imgForca = props.imgForca
   const setImgForca = props.setImgForca
   const setHabilitar = props.setHabilitar
+  const chute = props.chute
+  const setCor = props.setCor
   let cor;
 
   function verificarLetra(letra){
     const temLetra = palavraListada.includes(letra)
-    const temTraco = lista.includes("_")
     let errosAtualizados;
 
     for(let i=0; palavraListada.length>i;i++){
@@ -41,11 +42,13 @@ export default function Letras(props){
 
     if(listaComparacao === palavraResposta){
       cor = "green"
+      setCor(cor)
       setHabilitar(true)
     }
 
     if(errosAtualizados === 6){
       cor = "red"
+      setCor(cor)
       setHabilitar(true)
     }
 

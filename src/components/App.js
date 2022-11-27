@@ -23,6 +23,8 @@ export default function App() {
   const [chute, setChute] = useState([])
   const [texto, setTexto] = useState("")
 
+  const [cor, setCor] = useState("")
+
   return (
     <div className="conteudo">
 
@@ -34,10 +36,11 @@ export default function App() {
       
       <Letras habilitar={habilitar} setHabilitar={setHabilitar} palavraListada={palavraListada} 
       divOculta={divOculta} lista={lista} setDivOculta={setDivOculta} setLista={setLista} 
-      erros={erros} setErros={setErros} imgForca={imgForca} setImgForca={setImgForca}/>
+      erros={erros} setErros={setErros} imgForca={imgForca} setImgForca={setImgForca} chute={chute}
+      setCor={setCor}/>
 
       <Chute chute={chute} setChute={setChute} texto={texto} setTexto={setTexto}
-      habilitar={habilitar}/>
+      setHabilitar={setHabilitar} palavraListada={palavraListada} setImgForca={setImgForca}/>
     </div>
   );
 }

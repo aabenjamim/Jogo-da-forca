@@ -5,10 +5,25 @@ export default function Chute(props){
     const texto = props.texto
     const setTexto = props.setTexto
     const habilitar = props.habilitar
+    const palavraListada = props.palavraListada
+    const palavraResposta = palavraListada.join("")
+    const setHabilitar = props.setHabilitar
+    const setImgForca = props.setImgForca
+
+
+    function verificarChute(){
+        if(texto === palavraResposta){
+            setHabilitar(true)
+        } else{
+            setHabilitar(true)
+            setImgForca("forca6")
+        }
+    }
 
     function chutar(){
         setChute([...chute, texto])
         setTexto("")
+        verificarChute()
     }
 
     return(
