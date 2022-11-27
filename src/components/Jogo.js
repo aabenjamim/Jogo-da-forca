@@ -16,7 +16,7 @@ export default function Jogo({divOculta, palavraListada, setHabilitar,
   function iniciarJogo(){
     setErros(0)
     setImgForca("forca0")
-    setHabilitar(false)
+    setHabilitar("")
     escolherPalavra()
     console.log("palavraListada", palavraListada)
     listinha = palavraListada.map((letra)=> letra = "_")

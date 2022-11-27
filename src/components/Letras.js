@@ -46,6 +46,9 @@ export default function Letras(props){
       cor = "red"
       setCor(cor)
       setHabilitar(true)
+      setDivOculta(<div className="tracos" data-test="word" style={{color: cor}}
+      data-answer={`${palavraListada.join("")}`}>{palavraResposta}</div>)
+      return
     }
 
     setDivOculta(<div className="tracos" data-test="word" style={{color: cor}}

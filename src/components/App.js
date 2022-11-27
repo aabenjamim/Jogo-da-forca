@@ -6,7 +6,7 @@ import { useState } from "react";
 
 export default function App() {
 
-  const [habilitar, setHabilitar] = useState(true)
+  const [habilitar, setHabilitar] = useState("disabled")
   const [palavraListada, setPalavraListada] = useState([])
 
   const [lista, setLista] = useState([])
@@ -39,7 +39,7 @@ export default function App() {
       erros={erros} setErros={setErros} imgForca={imgForca} setImgForca={setImgForca} chute={chute}
       setCor={setCor} cor={cor}/>
 
-      <Chute chute={chute} setChute={setChute} texto={texto} setTexto={setTexto}
+      <Chute chute={chute} setChute={setChute} texto={texto} setTexto={setTexto} habilitar={habilitar}
       setHabilitar={setHabilitar} palavraListada={palavraListada} setImgForca={setImgForca}
       setDivOculta={setDivOculta}/>
     </div>
