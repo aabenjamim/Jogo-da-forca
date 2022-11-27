@@ -7,14 +7,11 @@ export default function Letras(props){
   const palavraResposta = palavraListada.join("")
   const lista = props.lista
   const setDivOculta = props.setDivOculta
-  const divOculta = props.divOculta
   const setLista = props.setLista
   const erros = props.erros
   const setErros = props.setErros
-  const imgForca = props.imgForca
   const setImgForca = props.setImgForca
   const setHabilitar = props.setHabilitar
-  const setCor = props.setCor
   let cor;
 
   function verificarLetra(letra){
@@ -38,13 +35,11 @@ export default function Letras(props){
 
     if(listaComparacao === palavraResposta){
       cor = "green"
-      setCor(cor)
       setHabilitar(true)
     }
 
     if(errosAtualizados === 6){
       cor = "red"
-      setCor(cor)
       setHabilitar(true)
       setDivOculta(<div className="tracos" data-test="word" style={{color: cor}}
       data-answer={`${palavraListada.join("")}`}>{palavraResposta}</div>)

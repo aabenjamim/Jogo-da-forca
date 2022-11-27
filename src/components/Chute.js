@@ -4,7 +4,6 @@ export default function Chute(props){
     const setChute = props.setChute
     const texto = props.texto
     const setTexto = props.setTexto
-    const habilitar = props.habilitar
     const palavraListada = props.palavraListada
     const palavraResposta = palavraListada.join("")
     const setHabilitar = props.setHabilitar
