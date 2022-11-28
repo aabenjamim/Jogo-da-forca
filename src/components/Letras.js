@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 export default function Letras(props){
 
   const alfabeto = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", 
@@ -12,6 +14,7 @@ export default function Letras(props){
   const setErros = props.setErros
   const setImgForca = props.setImgForca
   const setHabilitar = props.setHabilitar
+  const habilitar = props.habilitar
   let cor;
 
   function verificarLetra(letra){
@@ -60,7 +63,7 @@ export default function Letras(props){
   return(
       <div className="alfabeto">
         {alfabeto.map((l)=> 
-        (<button disabled = {props.habilitar} onClick={()=> verificarLetra(l)} id={l}
+        (<button disabled = {habilitar} onClick={()=> verificarLetra(l)} id={l}
         data-test="letter">{l}</button>))}
       </div>
     )
