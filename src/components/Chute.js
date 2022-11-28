@@ -32,7 +32,7 @@ export default function Chute(props){
     <div className="resposta">
         <label>Já sei a palavra!</label>
         <input data-test="guess-input" value={texto} disabled={props.habilitar}
-        onChange={(e) => setTexto(e.target.value)}/>
+        onChange={(e) => setTexto(e.target.value)} test={true}/>
         <button data-test="guess-button" onClick={chutar}>Chutar</button>
     </div>
     )

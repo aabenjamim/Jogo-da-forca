@@ -17,15 +17,14 @@ export default function App() {
   const [chute, setChute] = useState([])
   const [texto, setTexto] = useState("")
 
-
   return (
     <div className="conteudo">
 
-      <Jogo divOculta={divOculta} palavraListada={palavraListada}
-      setHabilitar={setHabilitar} setListaTracos={setListaTracos} 
-      setDivOculta={setDivOculta} lista={lista} setPalavraListada={setPalavraListada}
-      listaTracos={listaTracos} setLista={setLista} listinha={listinha} setListinha={setListinha}
-      imgForca={imgForca} setImgForca={setImgForca} setErros={setErros}/>
+      <Jogo divOculta={divOculta} palavraListada={palavraListada} setHabilitar={setHabilitar}
+      setListaTracos={setListaTracos} setDivOculta={setDivOculta} lista={lista} 
+      setPalavraListada={setPalavraListada} listaTracos={listaTracos} setLista={setLista} 
+      listinha={listinha} setListinha={setListinha} imgForca={imgForca}
+      setImgForca={setImgForca} setErros={setErros}/>
       
       <Letras habilitar={habilitar} setHabilitar={setHabilitar} palavraListada={palavraListada} 
       divOculta={divOculta} lista={lista} setDivOculta={setDivOculta} setLista={setLista} 

@@ -15,6 +15,7 @@ export default function Letras(props){
   let cor;
 
   function verificarLetra(letra){
+
     const temLetra = palavraListada.includes(letra)
     let errosAtualizados;
 
@@ -48,12 +49,18 @@ export default function Letras(props){
 
     setDivOculta(<div className="tracos" data-test="word" style={{color: cor}}
     data-answer={`${palavraListada.join("")}`}>{lista.join(" ")}</div>)
+
+
+    let elemento = document.getElementById(`${letra}`)
+    elemento.setAttribute("disabled", "disabled")
+    console.log(elemento)
+
     }  
 
   return(
       <div className="alfabeto">
         {alfabeto.map((l)=> 
-        (<button disabled = {props.habilitar}  onClick={()=> verificarLetra(l)}
+        (<button disabled = {props.habilitar} onClick={()=> verificarLetra(l)} id={l}
         data-test="letter">{l}</button>))}
       </div>
     )
