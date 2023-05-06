@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Jogo da Forca
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é uma implementação do clássico jogo da forca em formato de aplicação web. O objetivo do jogo é acertar a palavra oculta antes de esgotar todas as tentativas. Divirta-se desafiando seus conhecimentos e habilidades de adivinhação!
 
-## Available Scripts
+## Tecnologias utilizadas
 
-In the project directory, you can run:
+- React
+- HTML5
+- CSS3
+- JavaScript
 
-### `npm start`
+## Funcionalidades
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Interface intuitiva e amigável
+- Escolha aleatória de palavras
+- Registro de letras já tentadas
+- Contagem de tentativas restantes
+- Exibição visual da forca conforme as tentativas erradas
+- Verificação automática de acertos e fim de jogo
+- Possibilidade de reiniciar o jogo a qualquer momento
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Como jogar
 
-### `npm test`
+1. Abra o jogo no seu navegador.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Clique em "Escolher palavra"
 
-### `npm run build`
+3. Tente adivinhar a palavra digitando uma letra por vez no campo de entrada.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Continue adivinhando as letras até acertar a palavra completa ou até esgotar as tentativas.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. Escreva no input e clique no botão "chutar" para tentar adivinhar a palavra por inteiro.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+6. Se desejar jogar novamente, basta clicar em "Escolher palavra" de novo.
 
-### `npm run eject`
+## Contribuições
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Contribuições são bem-vindas! Se você tiver alguma ideia, sugestão ou correção, sinta-se à vontade para enviar um pull request.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
